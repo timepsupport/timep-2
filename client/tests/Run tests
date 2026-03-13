@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "🧪 Installing Playwright..."
+cd your-frontend-folder  # remplace par le chemin de ton frontend
+npm install -D @playwright/test
+npx playwright install chromium
+
+echo "🚀 Running tests..."
+npx playwright test --reporter=list
+
+echo "📊 Opening report..."
+npx playwright show-report
