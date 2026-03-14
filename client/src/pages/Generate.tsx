@@ -49,7 +49,7 @@ const Generate = () => {
         title,
         type: selectedTip,
         aspect: selectedAspect,
-        interests: interestsText,
+        interests: interestsText.split(",").map(i => i.trim()).filter(Boolean),
         consice: true,
         text_overlay: true,
       };
