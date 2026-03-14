@@ -48,9 +48,9 @@ export const validateGenerate = (req: Request, res: Response, next: NextFunction
   if (req.body.interests && typeof req.body.interests !== "string") {
     return res.status(400).json({ error: "'interests' doit être une chaîne." });
   }
-  if (req.body.interests && !Array.isArray(req.body.interests) && typeof req.body.interests !== "string") {
-  return res.status(400).json({ error: "'interests' invalide." });
-}
+  if (req.body.interests && req.body.interests.length > 300) {
+    return res.status(400).json({ error: "'interests' ne peut pas dépasser 300 caractères." });
+  }
 
   // Sanitize all string fields
   req.body.title = sanitizeString(title);
