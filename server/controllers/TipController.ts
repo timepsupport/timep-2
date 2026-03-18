@@ -622,7 +622,7 @@ START with <svg — NOTHING before it. END with </svg> — NOTHING after it.
 
 "cause_mechanism_consequence": `
 You MUST return ONLY raw HTML. No text before. No text after. No markdown.
-CRITICAL: You MUST include ALL 3 sections (CAUSE, MÉCANISME, CONSÉQUENCE). Max 2 bullet points per section, max 2 sentences each bullet. Be concise — completeness is more important than detail.
+
 Target: specialist physicians (ECN/USMLE). Use exact pathophysiology, real thresholds, drug names, guideline references (ESC/HAS/ACC). All in French. No analogies.
 
 <div style="display:flex;flex-direction:column;gap:0;padding:4px;font-family:sans-serif;">
@@ -1613,7 +1613,7 @@ export const generateTip = async (req: Request, res: Response) => {
       userId: clerkUserId,
       title,
       type: normalizedType,
-      interests,
+      interests: interests,
       aspect,
       isGenerating: true,
     });

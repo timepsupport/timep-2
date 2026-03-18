@@ -11,7 +11,7 @@ import webhookRoutes from "./Routes/webhookRoutes";
 import './configs/cronJobs';
 import BoostRouter from './Routes/BoostRoutes';
 import { globalLimiter, contactLimiter } from "./middlewares/RateLimiter.js";
-import { validateContact } from "./middlewares/Validate.js";
+import { validateContact } from "./middlewares/Validate";
 
 declare module 'express-session' {
     interface SessionData {

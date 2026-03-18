@@ -2,7 +2,7 @@ import express from 'express'
 import { deleteTip, generateTip } from '../controllers/TipController';
 import { getUsersTips } from '../controllers/UserController';
 import { generateLimiter } from '../middlewares/RateLimiter.js';
-import { validateGenerate, validateTipId } from '../middlewares/Validate.js';
+import { validateGenerate, validateTipId } from '../middlewares/Validate';
 
 const TipRouter = express.Router();
 
