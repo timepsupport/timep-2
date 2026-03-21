@@ -41,14 +41,16 @@ export const clerkWebhook = async (req: Request, res: Response) => {
   const email = data.email_addresses?.[0]?.email_address || `${data.id}@placeholder.com`;
   const userId = data.id;
 
-  await prisma.user.create({
-    data: {
-      id: userId,
-      email,
-      credits: 20,
-      plan: "free",
-    },
-  });
+await prisma.user.upsert({
+  where: { id: userId },
+  update: {},
+  create: {
+    id: userId,
+    email,
+    credits: 20,
+    plan: "free",
+  },
+});
 
   console.log(`✅ User created: ${email} with 20 credits`);
 }
