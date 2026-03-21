@@ -31,7 +31,7 @@ app.use(globalLimiter);
 app.use("/api/webhook", express.raw({ type: "application/json" }), webhookRoutes);
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://timep-production.up.railway.app'],
+    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://timep-production.up.railway.app', 'https://timep.online'],
     credentials: true
 }))
 
