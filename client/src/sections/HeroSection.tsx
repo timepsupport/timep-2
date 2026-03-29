@@ -39,7 +39,7 @@ export default function HeroSection() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 240, damping: 70, mass: 1 }}
             >
-                AI study generator for your <span className="move-gradient px-3 rounded-xl text-nowrap">medical studies.</span>
+                AI tips generator for your <span className="move-gradient px-3 rounded-xl text-nowrap">medical studies.</span>
             </motion.h1>
             <motion.p className="text-base text-center text-slate-200 max-w-lg mt-6"
                 initial={{ y: 50, opacity: 0 }}
